@@ -120,11 +120,10 @@ def snapshot(
     if subtitle:
         if isinstance(returns, _pd.Series):
             axes[0].set_title(
-                "%s - %s ;  Sharpe: %.2f                      \n"
+                "%s - %s"
                 % (
                     returns.index.date[:1][0].strftime("%e %b '%y"),
                     returns.index.date[-1:][0].strftime("%e %b '%y"),
-                    _stats.sharpe(returns),
                 ),
                 fontsize=12,
                 color="gray",

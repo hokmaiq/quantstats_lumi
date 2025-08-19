@@ -317,7 +317,7 @@ def html(
         if isinstance(returns, _pd.Series):
             yoy.columns = ["Return"]
             yoy["Cumulative"] = _utils.group_returns(returns, returns.index.year, True)
-            yoy["Return"] = yoy["Return"].round(2).astype(str) + "%"
+            yoy["Return"] = yoy["Return"].round(2).astype(str) 
             yoy["Cumulative"] = (yoy["Cumulative"] * 100).round(2).astype(str) + "%"
         elif isinstance(returns, _pd.DataFrame):
             # Don't show cumulative for multiple strategy portfolios
